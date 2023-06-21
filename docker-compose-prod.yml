@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    command: gunicorn cummins_main.wsgi -b 0.0.0.0:$PORT
+    volumes:
+      - .:/cummins_main
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=django-insecure-#9$$gh553_y^vd=3kg_&v#a#rny1%xw=&dsgxdo58+a1qd8qep*"
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  postgres_data:
