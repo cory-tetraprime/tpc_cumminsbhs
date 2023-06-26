@@ -7,12 +7,12 @@
                 <img src="{% static 'images/other/cummins-bhs --logo -50.png' %}">
             </div>
             <div class="col col-sm-12 col-md-5">
-                <a href="#" class="btn btn-primary mb-3"><i class="bi bi-person-circle me-1"></i><span>Information for New Patients</span></a>
-                <form>
+                <a href="https://cummins.herokuapp.com/patients/getting-started/" class="btn btn-primary mb-3"><i class="bi bi-person-circle me-1"></i><span>Information for New Patients</span></a>
+                <form action="{% url 'search' %}" method="get">
                     <div class="header_search">
                         <!-- <input type="text" class="form-control" placeholder="Search our website..."> -->
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search our website..."
+                            <input name="query" type="text" class="form-control" placeholder="Search our website..."
                                    aria-label="Input group example" aria-describedby="basic-addon1">
                             <span class="input-group-text" id="basic-addon1">
                   <button class="btn">
@@ -30,43 +30,42 @@
     <div class="container container-nav align-items-center justify-content-between">
         <nav id="navbar" class="navbar row">
             <ul>
-                <li><a href="#hero" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center"></i></a></li>
-                <li class="dropdown"><a href="#"><span>About</span> <i
+                <li><a href="/" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center"></i></a></li>
+                <li class="dropdown"><a href="/about/"><span>About</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Mission & Vision</a></li>
-                        <li><a href="#">Awards & Recognition</a></li>
+                        <li><a href="/about/mission-vision/">Mission & Vision</a></li>
+                        <li><a href="/about/awards-recognition/">Awards & Recognition</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Services</span> <i
+                <li class="dropdown"><a href="/services/"><span>Services</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Substance Use Treatment</a></li>
-                        <li><a href="#">Adult Services</a></li>
-                        <li><a href="#">School-Based</a></li>
-                        <li><a href="#">Youth and Family Services</a></li>
-                        <li><a href="#">All Services</a></li>
+                        <li><a href="/services/all-services/">All Services</a></li>
+                        <li><a href="/services/substance-use-treatment/">Substance Use Treatment</a></li>
+                        <li><a href="/services/adult-services/">Adult Services</a></li>
+                        <li><a href="/services/school-based/">School-Based</a></li>
+                        <li><a href="/services/youth-family-services/">Youth and Family Services</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Programs</a></li>
-                <li class="dropdown"><a href="#"><span>Patient Information</span> <i
+                <li><a href="/programs/">Programs</a></li>
+                <li class="dropdown"><a href="/patients/"><span>Patient Information</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Getting Started</a></li>
-                        <li><a href="#">New Consumer First Visit</a></li>
-                        <li><a href="#">Payment Options</a></li>
-                        <li><a href="#">Medical Records</a></li>
+                        <li><a href="/patients/getting-started/">Getting Started</a></li>
+                        <li><a href="/patients/new-consumer-first-visit/">New Consumer First Visit</a></li>
+                        <li><a href="/patients/payment-options/">Payment Options</a></li>
+                        <li><a href="/patients/medical-records/">Medical Records</a></li>
                     </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="dropdown"><a href="#"><span>Contact</span> <i
+                <li><a href="/blog/">Blog</a></li>
+                <li class="dropdown"><a href="/contact/"><span>Contact</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                        <li><a href="#">Contact Form</a></li>
-                        <li><a href="#">Our Locations</a></li>
+                        <li><a href="/contact/">Our Locations</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact" class="nav_careers"><i class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
+                <li><a href="/careers" class="nav_careers"><i class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
                 </li>
             </ul>
         </nav><!-- .navbar -->

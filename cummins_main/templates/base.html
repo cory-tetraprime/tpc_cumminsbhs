@@ -73,67 +73,9 @@
     {% block content %}
     {% endblock %}
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-12 footer-info">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <!-- <span>Cummins BHS</span> -->
-                        <img src="{% static 'images/other/cummins-bhs --logo -footer.png' %}">
-                    </a>
-                    <p>We Welcome Medicare,<br>
-                        Medicaid, and 3rd party<br>
-                        Insurances as well as Self-Pay.</p>
-                    <div class="social-links d-flex mt-4">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-6 footer-links">
-                    <h4>Corporate Office</h4>
-                    <ul>
-                        <li><a href="#">5101 East US 36, Suite 101<br>
-                            Avon, Indiana 46123</a></li>
-                        <li><a href="#">Phone: (888) 714-1927</a></li>
-                        <li><a href="#">Fax (Medical Records Only):<br>
-                            (317) 272-6811</a></li>
-                        <li><a href="#">24-hour Emergency Phone<br>
-                            (888) 714-1927 Ext 1501</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-6 footer-links">
-                    <h4>Business Office</h4>
-                    <ul>
-                        <li><a href="#">5101 East US 36, Suite 100<br>
-                            Avon, Indiana 46123</a></li>
-                        <li><a href="#">Phone: (888) 714-1927</a></li>
-                        <li><a href="#">Toll-free: (888) 714-1927</a></li>
-                        <li><a href="#">Fax: (317) 745-9565</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-12 footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">HIPAA Privacy Notice</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Statement</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-    </footer><!-- End Footer -->
-    <!-- End Footer -->
+    {% block footer %}
+        {% include "includes/footer.html" with parent=site_root calling_page=self %}
+    {% endblock footer %}
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

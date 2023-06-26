@@ -2661,22 +2661,44 @@ header {
 section {
 
 	.h2, h2 {
-		font-size: 1.75rem;
+		font-size: 1.8rem;
 	}
 
 	@media (min-width: 1200px) {
 		.h2, h2 {
-			font-size: 1.75rem;
+			font-size: 1.8rem;
 		}
 	}
 
 	.h3, h3 {
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 	}
 
 	@media (min-width: 1200px) {
 		.h3, h3 {
-			font-size: 1.3rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	.h4, h4 {
+		font-size: 1.1rem;
+	}
+
+	@media (min-width: 1200px) {
+		.h4, h4 {
+			font-size: 1.1rem;
+		}
+	}
+
+	.h5, h5 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	@media (min-width: 1200px) {
+		.h5, h5 {
+			font-size: 1rem;
+		    font-weight: bold;
 		}
 	}
 
@@ -2755,7 +2777,7 @@ section {
 
 		.main-content {
 			h2 {
-				margin-top: 0.5rem;
+				margin-top: 1rem;
 
 				&::after {
 					content: " ";
@@ -2768,7 +2790,7 @@ section {
 			}
 
 			h3 {
-				margin-top: 0.5rem;
+				margin-top: 2rem;
 
 				&::after {
 					content: " ";
@@ -2778,6 +2800,10 @@ section {
 					padding-bottom: 1rem;
 					width: 5rem;
 				}
+			}
+
+			h4 {
+				margin-top: 1.2rem;
 			}
 		}
 

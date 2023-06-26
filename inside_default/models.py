@@ -10,9 +10,9 @@ from wagtail.blocks import RawHTMLBlock
 
 
 class InsideDefault(Page):
-    content_rich_1 = RichTextField(blank=True)
-    content_rich_2 = RichTextField(blank=True)
-    image_banner = models.ImageField(upload_to='images/', blank=True)
+    content_rich_1 = RichTextField(verbose_name='Sidebar List', blank=True)
+    content_rich_2 = RichTextField(verbose_name='Sidebar Content', blank=True)
+    image_banner = models.ImageField(verbose_name='Page Banner', upload_to='images/', blank=True)
     body = StreamField([
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
@@ -21,7 +21,7 @@ class InsideDefault(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('image_banner'),
-        FieldPanel('body')
+        FieldPanel('body'),
+        FieldPanel('content_rich_1'),
+        FieldPanel('content_rich_2'),
     ]
-
-# Add additional inside_default variants.

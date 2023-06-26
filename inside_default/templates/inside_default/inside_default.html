@@ -9,40 +9,38 @@
 {% block content %}
 
 <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero">
-    <div class="container position-relative" style="background-image: url('{{ page.image_banner.url }}'); height: 240px; border-radius: 10px;">
-      <h1>Page Title Goes Here</h1>
+{% if page.image_banner %}
+<section id="hero" class="hero">
+    <div class="hero-container container position-relative" style="background-image: url('{{ page.image_banner.url }}'); height: 240px; border-radius: 10px;">
+        <h1>{{ page.title }}</h1>
     </div>
-  </section>
-  <!-- End Hero Section -->
+</section>
+{% endif %}
+<!-- End Hero Section -->
 
 <main id="main">
 
     <!-- ======= Section Two ======= -->
     <section id="page-content" class="page-content">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4">
-          <div class="col-lg-9 main-content">
-            {% include_block page.body %}
-          </div>
-          <div class="col-lg-3 sidebar">
-            <div class="row">
-                <div class="col sidebar-info--bg-1">
-                    <h3><i class="bi bi-info-circle-fill"></i> On This Page</h3>
-                    <ul>
-                        <li><a href="#">Mission & Vision</a></li>
-                        <li><a href="#">For Persons Seeking Services</a></li>
-                        <li><a href="#">For Behavioral Health</a></li>
-                        <li><a href="#">For Community Organizations</a></li>
-                        <li><a href="#">Our Values</a></li>
-                        <li><a href="#">More Information</a></li>
-                    </ul>
+            <div class="row gx-5">
+                <div class="col-sm-12 col-lg-9 main-content">
+                    {% include_block page.body %}
+                </div>
+                <div class="col-sm-12 col-lg-3 sidebar">
+                    <div class="row">
+                        <div class="col sidebar-info--bg-1">
+                            {% if page.content_rich_1|richtext %}
+                            <h3><i class="bi bi-info-circle-fill"></i> On This Page</h3>
+                            {{ page.content_rich_1|richtext }}
+                            {% endif %}
+                            {{ page.content_rich_2|richtext }}
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
     </section><!-- End Section -->
 
     {% block prefooter %}
