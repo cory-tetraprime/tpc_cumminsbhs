@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "accounts.apps.AccountsConfig",
-    "inside_default.apps.InsideDefaultConfig"
+    "inside_default.apps.InsideDefaultConfig",
+    "test_model.apps.TestModelConfig"
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"

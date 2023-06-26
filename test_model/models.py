@@ -3,25 +3,20 @@ from django.db import models
 from wagtail.models import Page
 from wagtail.fields import StreamField
 from wagtail import blocks
-from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.blocks import RawHTMLBlock
 
 
-class InsideDefault(Page):
-    content_rich_1 = RichTextField(blank=True)
-    content_rich_2 = RichTextField(blank=True)
-    image_banner = models.ImageField(upload_to='images/', blank=True)
+class TestModel(Page):
+    image_banner = models.ImageField(upload_to='images/')
     body = StreamField([
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('html', RawHTMLBlock()),
-    ], use_json_field=True, blank=True)
+    ], use_json_field=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('image_banner'),
         FieldPanel('body')
     ]
-
-# Add additional inside_default variants.
