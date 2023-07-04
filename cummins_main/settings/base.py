@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts.apps.AccountsConfig",
     "inside_default.apps.InsideDefaultConfig",
-    "test_model.apps.TestModelConfig"
+    "test_model.apps.TestModelConfig",
+    'sass_processor',
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
@@ -132,12 +133,16 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    'sass_processor.finders.CssFinder',
 ]
 
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, "static"),
 ]
 
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    os.path.join(PROJECT_DIR, "static/css/"),
+]
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
 # JavaScript / CSS assets being served from cache (e.g. after a Wagtail upgrade).

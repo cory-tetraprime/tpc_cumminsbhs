@@ -10,6 +10,8 @@ services:
     depends_on:
       - db
     environment:
+      - "DJANGO_SETTINGS_MODULE=cummins_main.settings.dev"
+#      - "DJANGO_SETTINGS_MODULE=cummins_main.settings.production"
       - "DJANGO_SECRET_KEY=django-insecure-#9$$gh553_y^vd=3kg_&v#a#rny1%xw=&dsgxdo58+a1qd8qep*"
       - "DJANGO_DEBUG=True"
       - "DJANGO_SECURE_SSL_REDIRECT=False"

@@ -33,6 +33,7 @@ RUN pip install -r /requirements.txt
 
 # Use /app folder s aa directory where the source code is stored.
 WORKDIR /
+# WORKDIR /cummins_main
 
 # Set this directory to be owned by the "wagtail" user. This Wagtail project
 # uses SQLite, the folder needs to be owned by the user that
@@ -61,4 +62,5 @@ USER wagtail
 # CMD set -xe; python manage.py migrate --noinput; gunicorn cummins_main.wsgi:application
 
 CMD gunicorn wsgi:application
-#  --bind 0.0.0.0:$PORT
+# REQUIRED FOR HEROKU
+# --bind 0.0.0.0:$PORT  (UNUSED)
