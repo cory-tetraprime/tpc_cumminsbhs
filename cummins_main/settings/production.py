@@ -18,10 +18,25 @@ DATABASES = {
     "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres2@db/postgres2")
 }
 
-STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# STATICFILES_DIRS = [
+#     '/',
+# ]
 
+SASS_PROCESSOR_INCLUDE_DIRS = [
+    's3://cummins-web/',
+]
+
+STATIC_URL = "https://cummins-web.s3.amazonaws.com/"
+MEDIA_URL = "/media/"
+# Figure out what /media is used for.
+
+INSTALLED_APPS = INSTALLED_APPS + ["storages"]
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = "private"
 AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_REGION_NAME = 'us-east-1'
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_QUERYSTRING_AUTH = False  # Optional: to remove query strings from generated URLs

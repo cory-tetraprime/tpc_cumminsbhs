@@ -7,11 +7,11 @@ For more information on this file, see
 https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
-import os
+# import os
 
-from django.core.wsgi import get_wsgi_application
+# from django.core.wsgi import get_wsgi_application
 
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cummins_main.settings.dev")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cummins_main.settings.production")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cummins_main.settings.production")
 
-application = get_wsgi_application()
+# application = get_wsgi_application()

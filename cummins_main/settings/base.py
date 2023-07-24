@@ -91,7 +91,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "cummins_main.wsgi.application"
+WSGI_APPLICATION = "wsgi.application"
+# Ref?
 
 
 # Password validation

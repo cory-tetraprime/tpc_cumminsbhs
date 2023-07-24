@@ -1,19 +1,19 @@
 {% load static %}
 <!-- ======= Header ======= -->
-<header id="header" class="header align-items-center">
+<header id="header" class="header align-items-center text-center text-sm-start">
     <div class="container mb-4">
         <div class="row">
-            <div class="col col-sm-12 col-md-7 logo">
+            <div class="col-12 col-md-7 col-lg-8 logo">
                 <a href="/"><img src="{% static 'images/other/cummins-bhs --logo -50.png' %}"></a>
             </div>
-            <div class="col col-sm-12 col-md-5">
-                <a href="https://cummins.herokuapp.com/patients/getting-started/" class="btn btn-primary mb-3"><i class="bi bi-person-circle me-1"></i><span>Information for New Patients</span></a>
+            <div class="col-12 col-md-5 col-lg-4 mt-3">
+                <a href="/patients/getting-started/" class="btn btn-primary mb-3"><span class="d-flex align-items-center"><i class="bi bi-person-circle me-1 mr-4"></i>Information for New Patients</span></a>
                 <form action="{% url 'search' %}" method="get">
                     <div class="header_search">
                         <!-- <input type="text" class="form-control" placeholder="Search our website..."> -->
                         <div class="input-group">
                             <input name="query" type="text" class="form-control" placeholder="Search our website..."
-                                   aria-label="Input group example" aria-describedby="basic-addon1">
+                                   aria-label="Website search field" aria-describedby="basic-addon1">
                             <span class="input-group-text" id="basic-addon1">
                   <button class="btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -28,28 +28,21 @@
         </div>
     </div>
     <div class="container container-nav align-items-center justify-content-between">
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar row">
             <ul>
-                <li><a href="/" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center"></i></a></li>
-                <li class="dropdown"><a href="/about/"><span>About</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                        <li><a href="/about/mission-vision/">Mission & Vision</a></li>
-                        <li><a href="/about/awards-recognition/">Awards & Recognition</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="/services/"><span>Services</span> <i
+                <li><a href="/" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center d-none d-lg-block""></i><span class="d-lg-none">Home</span></a></li>
+                <li><a href="/about/"><span>About</span></a></li>
+                <li class="dropdown"><a href="/services/all-services/"><span>Services</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                         <li><a href="/services/all-services/">All Services</a></li>
                         <li><a href="/services/substance-use-treatment/">Substance Use Treatment</a></li>
                         <li><a href="/services/adult-services/">Adult Services</a></li>
-                        <li><a href="/services/school-based/">School-Based</a></li>
                         <li><a href="/services/youth-family-services/">Youth and Family Services</a></li>
                     </ul>
                 </li>
-                <li><a href="/programs/">Programs</a></li>
-                <li class="dropdown"><a href="/patients/"><span>Patient Information</span> <i
+                <li class="dropdown"><a href="/patients/getting-started/"><span>Patient Information</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                         <li><a href="/patients/getting-started/">Getting Started</a></li>
@@ -58,20 +51,15 @@
                         <li><a href="/patients/medical-records/">Medical Records</a></li>
                     </ul>
                 </li>
-                <li><a href="/blog/">Blog</a></li>
-                <li class="dropdown"><a href="/contact/"><span>Contact</span> <i
-                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                        <li><a href="/contact/">Our Locations</a></li>
-                    </ul>
-                </li>
-                <li><a href="/careers" class="nav_careers"><i class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
+                <li><a href="/coming-soon/">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/careers" class="nav_careers d-none d-lg-block"><i class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
                 </li>
             </ul>
         </nav><!-- .navbar -->
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+<!--        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>-->
+<!--        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>-->
 
     </div>
 </header><!-- End Header -->

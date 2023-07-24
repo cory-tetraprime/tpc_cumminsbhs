@@ -15,11 +15,13 @@
 
             <div class="row gx-5">
                 <div class="col-sm-12 main-content">
-                    <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="query"{% if search_query %} value="{{ search_query }}"{% endif %}>
-                        <input type="submit" value="Search" class="button">
-                    </form>
+<!--                    <form action="{% url 'search' %}" method="get">-->
+<!--                        <input type="text" name="query"{% if search_query %} value="{{ search_query }}"{% endif %}>-->
+<!--                        <input type="submit" value="Search" class="button">-->
+<!--                    </form>-->
+
                     {% if search_results %}
+                    <b>{{ results_count }} results for: "{% if search_query %}{{ search_query }}{% endif %}"</b>
                     <ul>
                         {% for result in search_results %}
                         <li>
@@ -27,6 +29,7 @@
                             {% if result.search_description %}
                             {{ result.search_description }}
                             {% endif %}
+                            <p><a href="{% pageurl result %}">Visit Page</a></p>
                         </li>
                         {% endfor %}
                     </ul>

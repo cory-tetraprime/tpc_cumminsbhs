@@ -19,6 +19,8 @@ def search(request):
     else:
         search_results = Page.objects.none()
 
+    results_count = len(search_results)
+
     # Pagination
     paginator = Paginator(search_results, 10)
     try:
@@ -34,5 +36,6 @@ def search(request):
         {
             "search_query": search_query,
             "search_results": search_results,
+            "results_count": results_count
         },
     )
