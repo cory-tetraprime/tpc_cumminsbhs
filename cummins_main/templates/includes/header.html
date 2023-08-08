@@ -3,27 +3,33 @@
 <header id="header" class="header align-items-center text-center text-sm-start">
     <div class="container mb-4">
         <div class="row">
-            <div class="col-12 col-md-7 col-lg-8 logo">
+            <div class="col-12 col-md-7 col-lg-7 logo">
                 <a href="/"><img src="{% static 'images/other/cummins-bhs --logo -50.png' %}"></a>
             </div>
-            <div class="col-12 col-md-5 col-lg-4 mt-3">
-                <a href="/patients/getting-started/" class="btn btn-primary mb-3"><span class="d-flex align-items-center"><i class="bi bi-person-circle me-1 mr-4"></i>Information for New Patients</span></a>
-                <form action="{% url 'search' %}" method="get">
-                    <div class="header_search">
-                        <!-- <input type="text" class="form-control" placeholder="Search our website..."> -->
-                        <div class="input-group">
-                            <input name="query" type="text" class="form-control" placeholder="Search our website..."
-                                   aria-label="Website search field" aria-describedby="basic-addon1">
-                            <span class="input-group-text" id="basic-addon1">
-                  <button class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-search" viewBox="0 0 16 16">
-  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-</svg></button>
-                </span>
-                        </div>
+            <div class="col-12 col-md-5 col-lg-5 mt-3">
+                <div class="row">
+                    <div class="col-12 d-flex mb-3">
+                        <a href="/patients/getting-started/" class="btn btn-primary me-3"><span class="d-flex align-items-center"><i class="bi bi-person-fill-add fs-6 me-1 mr-4"></i><span><span class="d-none d-lg-inline">Information for </span>New Patients</span></span></a>
+                        <a href="https://cbhsc.smartcarenet.com/CBHSmartcareProd/Login.aspx?Status=Logout&SessionExpire=Y" target="_blank" class="btn btn-primary btn-custom--mylink ms-auto"><span class="d-flex align-items-center"><i class="bi bi-person-circle fs-6 me-1 mr-4"></i>MyLink</span></a>
                     </div>
-                </form>
+                    <div class="col-12">
+                        <form action="{% url 'search' %}" method="get">
+                            <div class="header_search">
+                                <!-- <input type="text" class="form-control" placeholder="Search our website..."> -->
+                                <div class="input-group">
+                                    <input name="query" type="text" class="form-control" placeholder="Search our website..." aria-label="Website search field" aria-describedby="basic-addon1">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <button class="btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -31,7 +37,8 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar row">
             <ul>
-                <li><a href="/" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center d-none d-lg-block""></i><span class="d-lg-none">Home</span></a></li>
+                <li><a href="/" title="Go Home"><i class="bi bi-house-fill d-flex align-items-center d-none d-lg-block""></i>
+                    <span class="d-lg-none">Home</span></a></li>
                 <li><a href="/about/"><span>About</span></a></li>
                 <li class="dropdown"><a href="/services/all-services/"><span>Services</span> <i
                         class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -51,15 +58,16 @@
                         <li><a href="/patients/medical-records/">Medical Records</a></li>
                     </ul>
                 </li>
-                <li><a href="/coming-soon/">Blog</a></li>
+                <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="/careers" class="nav_careers d-none d-lg-block"><i class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
+                <li><a href="/careers" class="nav_careers d-none d-lg-block"><i
+                        class="bi bi-briefcase-fill me-1"></i><span>Careers</span></a>
                 </li>
             </ul>
         </nav><!-- .navbar -->
 
-<!--        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>-->
-<!--        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>-->
+        <!--        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>-->
+        <!--        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>-->
 
     </div>
 </header><!-- End Header -->

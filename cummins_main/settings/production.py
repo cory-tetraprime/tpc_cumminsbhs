@@ -27,8 +27,7 @@ SASS_PROCESSOR_INCLUDE_DIRS = [
 ]
 
 STATIC_URL = "https://cummins-web.s3.amazonaws.com/"
-MEDIA_URL = "/media/"
-# Figure out what /media is used for.
+MEDIA_URL = STATIC_URL + "media/"
 
 INSTALLED_APPS = INSTALLED_APPS + ["storages"]
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"

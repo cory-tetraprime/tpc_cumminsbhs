@@ -26,6 +26,7 @@ DATABASES = {
         "NAME": "cummins_main_1",
         "USER": "postgres",
         "PASSWORD": "T3tr@Pr1me",
+        # "HOST": "172.31.160.1",
         "HOST": "192.168.1.75",
         "PORT": 5432
     }

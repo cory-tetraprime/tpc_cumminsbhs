@@ -54,8 +54,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts.apps.AccountsConfig",
     "inside_default.apps.InsideDefaultConfig",
+    "blog.apps.BlogConfig",
     "test_model.apps.TestModelConfig",
     'sass_processor',
+    'wagtail.contrib.routable_page',
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"

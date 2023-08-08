@@ -206,7 +206,6 @@ section {
 
 .topbar {
   background: none;
-  height: 60px;
   font-size: 12px;
   transition: all 0.5s;
   padding: 0; }
@@ -2075,9 +2074,9 @@ section {
   .topbar .contact-info i {
     line-height: 0.6rem; }
   .topbar .contact-info .contact-info_heading {
-    font-size: .4rem; }
+    font-size: .5rem; }
   .topbar .contact-info .contact-info_title {
-    font-size: .5rem; } }
+    font-size: .6rem; } }
 
 header .header_search input[type="text"] {
   border-right: 0;
@@ -2098,6 +2097,7 @@ header .header_search .input-group-text {
   border-radius: 100px;
   color: #515151;
   font-size: .9rem;
+  font-weight: 600;
   padding-right: 1.2rem;
   text-align: left; }
   .btn-primary:hover, .btn-primary:first-child:hover, :not(.btn-check) + .btn:active:hover {
@@ -2109,6 +2109,23 @@ header .header_search .input-group-text {
     border: 1px solid #7FB5D6; }
     .btn-primary.btn-primary--alt i, .btn-primary:first-child.btn-primary--alt i, :not(.btn-check) + .btn:active.btn-primary--alt i {
       color: #016DAE; }
+  .btn-primary.btn-custom--mylink, .btn-primary:first-child.btn-custom--mylink, :not(.btn-check) + .btn:active.btn-custom--mylink {
+    background-color: #d4c8e4;
+    border: 1px solid #d4c8e4; }
+    .btn-primary.btn-custom--mylink:hover, .btn-primary:first-child.btn-custom--mylink:hover, :not(.btn-check) + .btn:active.btn-custom--mylink:hover {
+      background-color: #e4dced;
+      border: 1px solid #d4c8e4; }
+  .btn-primary.btn-custom--footer-subscribe, .btn-primary:first-child.btn-custom--footer-subscribe, :not(.btn-check) + .btn:active.btn-custom--footer-subscribe {
+    background-color: #016DAE;
+    color: #fff; }
+    .btn-primary.btn-custom--footer-subscribe:hover, .btn-primary:first-child.btn-custom--footer-subscribe:hover, :not(.btn-check) + .btn:active.btn-custom--footer-subscribe:hover {
+      background-color: #BEDAEA;
+      border: 1px solid #016DAE;
+      color: #016DAE; }
+      .btn-primary.btn-custom--footer-subscribe:hover i, .btn-primary:first-child.btn-custom--footer-subscribe:hover i, :not(.btn-check) + .btn:active.btn-custom--footer-subscribe:hover i {
+        color: #016DAE; }
+    .btn-primary.btn-custom--footer-subscribe i, .btn-primary:first-child.btn-custom--footer-subscribe i, :not(.btn-check) + .btn:active.btn-custom--footer-subscribe i {
+      color: #fff; }
 
 section {
   /* Main content of page */ }
@@ -2136,18 +2153,18 @@ section {
       font-weight: bold; } }
   section.page-subscribe h2::after {
     display: none; }
-  section.page-subscribe .container {
+  section.page-subscribe > .container {
     background-image: url("https://cummins-web.s3.amazonaws.com/images/other/bg_pattern-1.png");
     background-size: cover;
     border-radius: 10px;
     padding: 3rem 1rem;
     position: relative;
     z-index: 0; }
-    section.page-subscribe .container::after {
+    section.page-subscribe > .container::after {
       content: " ";
       background-color: #fff;
       position: absolute;
-      opacity: .5;
+      opacity: .7;
       left: 0;
       top: 0;
       height: 100%;
@@ -2160,6 +2177,8 @@ section {
     font-size: .9rem; }
     section.page-subscribe .footer_subscribe input[type="text"]::placeholder {
       font-style: italic; }
+  section.page-subscribe .footer_subscribe > div {
+    width: 100%; }
   section.home-welcome {
     padding-top: 0; }
   section.home-blog-feature {
@@ -2209,22 +2228,26 @@ section {
         padding-bottom: 1rem;
         width: 5rem; }
     section.home-welcome .main-content h4, section.page-content .main-content h4 {
+      font-weight: bold;
       margin-top: 1.2rem; }
+      section.home-welcome .main-content h4 i, section.page-content .main-content h4 i {
+        font-size: 1.4rem; }
     section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
-      margin-top: 1rem;
-      padding: 1.4rem 1.2rem 1.2rem 1.2rem; }
-      section.home-welcome .sidebar .sidebar-info h1, section.page-content .sidebar .sidebar-info h1 {
-        color: #1B154D;
-        font-weight: normal;
-        font-size: 1.4rem;
-        margin-bottom: .8rem; }
+      /*margin-top: 1rem;
+                padding: 1.4rem 1.2rem 1.2rem 1.2rem;*/
+      /*h1 {
+		            color: $brand-blue--dk;
+		            font-weight: normal;
+		            font-size: 1.4rem;
+		            margin-bottom: .8rem;
+		        }*/ }
       section.home-welcome .sidebar .sidebar-info ul, section.page-content .sidebar .sidebar-info ul {
-        font-size: 1rem;
         line-height: 1.8rem;
-        padding-left: 1.6rem; }
+        /*font-size: 1rem;
+                    padding-left: 1.6rem;*/ }
         section.home-welcome .sidebar .sidebar-info ul li, section.page-content .sidebar .sidebar-info ul li {
-          line-height: 1.3rem;
-          margin-bottom: 0.5rem; }
+          /*line-height: 1.3rem;
+                        margin-bottom: 0.5rem;*/ }
           section.home-welcome .sidebar .sidebar-info ul li::marker, section.page-content .sidebar .sidebar-info ul li::marker {
             color: #7FB5D6; }
       section.home-welcome .sidebar .sidebar-info.sidebar-info--bg-1, section.page-content .sidebar .sidebar-info.sidebar-info--bg-1 {
@@ -2234,11 +2257,13 @@ section {
         color: #D2B582; }
     @media (max-width: 992px) {
       section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
-        padding: 1.2rem 1rem 1rem 1rem; }
-        section.home-welcome .sidebar .sidebar-info h1, section.page-content .sidebar .sidebar-info h1 {
-          font-size: 1rem; }
-        section.home-welcome .sidebar .sidebar-info ul, section.page-content .sidebar .sidebar-info ul {
-          font-size: .8rem; } }
+        /*padding: 1.2rem 1rem 1rem 1rem;
+
+                h1 {
+                    font-size: 1rem;
+                }
+
+                ul { font-size: .8rem; }*/ } }
   section.page-content .sidebar-article h3::after {
     display: none; }
   section.page-content .sidebar-article img {
@@ -2249,3 +2274,19 @@ section {
     border-radius: 10px; }
   section.page-feature {
     background-color: #EDE1CD; }
+
+.template-blogindexpage .blog-listing-card .blog-listing-card__image img {
+  border: 1px solid #BEDAEA; }
+
+.template-blogpage img.blog-featured-image {
+  border: 1px solid #BEDAEA; }
+
+.template-blogpage .block-image {
+  display: flex; }
+  .template-blogpage .block-image img {
+    border: 1px solid #BEDAEA;
+    margin: .5rem auto 1.8rem auto;
+    padding: .4rem; }
+
+._form ._error {
+  color: red; }

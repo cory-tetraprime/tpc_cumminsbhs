@@ -76,6 +76,8 @@ $brand-gold--og: #D2B582;
 $brand-gold--lt: #EDE1CD;
 $brand-gold--xlt: #FBF8F2;
 
+$warning: red;
+
 $border-radius--og: 10px;
 
 $grid-breakpoints: (
@@ -86,6 +88,7 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
+
 
 
 @-webkit-keyframes animate-preloader {
@@ -329,7 +332,7 @@ section {
 }
 .topbar {
 	background: none;
-	height: 60px;
+	// height: 60px;
 	font-size: 12px;
 	transition: all 0.5s;
 	padding: 0;
@@ -2783,11 +2786,11 @@ section {
 	    }
 
 		.contact-info_heading {
-		    font-size: .4rem;
+		    font-size: .5rem;
 		}
 
         .contact-info_title {
-		    font-size: .5rem;
+		    font-size: .6rem;
         }
 	}
 }
@@ -2823,6 +2826,7 @@ header {
 	border-radius: 100px;
 	color: $brand-txt-color_1;
 	font-size: .9rem;
+	font-weight: 600;
 	padding-right: 1.2rem;
     text-align: left;
 
@@ -2846,6 +2850,35 @@ header {
 
 		i {
 		    color: $brand-blue--og;
+		}
+	}
+
+	&.btn-custom--mylink {
+		background-color: #d4c8e4;
+        border: 1px solid #d4c8e4;
+
+		&:hover {
+			background-color: #e4dced;
+		    border: 1px solid #d4c8e4;
+		}
+	}
+
+	&.btn-custom--footer-subscribe {
+		background-color: $brand-blue--og;
+		color: #fff;
+
+		&:hover {
+			background-color:  $brand-blue--xlt;
+		    border: 1px solid $brand-blue--og;
+            color: $brand-blue--og;
+
+            i {
+                color: $brand-blue--og;
+            }
+		}
+
+		i {
+		    color: #fff;
 		}
 	}
 }
@@ -2902,7 +2935,7 @@ section {
 	        }
 	    }
 
-		.container {
+		& > .container {
 			background-image: url('https://cummins-web.s3.amazonaws.com/images/other/bg_pattern-1.png');
 			background-size: cover;
 			border-radius: $border-radius--og;
@@ -2914,7 +2947,7 @@ section {
 			    content: " ";
 			    background-color: #fff;
 			    position: absolute;
-			    opacity: .5;
+			    opacity: .7;
 			    left: 0;
 			    top: 0;
 			    height: 100%;
@@ -2936,6 +2969,10 @@ section {
 				&::placeholder {
 					font-style: italic;
 				}
+			}
+
+			& > div {
+			    width: 100%;
 			}
 
 			.input-group-text {
@@ -3044,24 +3081,24 @@ section {
 		.sidebar {
 
 		    .sidebar-info {
-		        margin-top: 1rem;
-                padding: 1.4rem 1.2rem 1.2rem 1.2rem;
+		        /*margin-top: 1rem;
+                padding: 1.4rem 1.2rem 1.2rem 1.2rem;*/
 
-		        h1 {
+		        /*h1 {
 		            color: $brand-blue--dk;
 		            font-weight: normal;
 		            font-size: 1.4rem;
 		            margin-bottom: .8rem;
-		        }
+		        }*/
 
                 ul {
-                    font-size: 1rem;
                     line-height: 1.8rem;
-                    padding-left: 1.6rem;
+                    /*font-size: 1rem;
+                    padding-left: 1.6rem;*/
 
                     li {
-                        line-height: 1.3rem;
-                        margin-bottom: 0.5rem;
+                        /*line-height: 1.3rem;
+                        margin-bottom: 0.5rem;*/
 
                         &::marker {
                             color: $brand-blue--lt;
@@ -3079,13 +3116,13 @@ section {
 
             @media (max-width: map-get($grid-breakpoints, lg)) {
 		    .sidebar-info {
-                padding: 1.2rem 1rem 1rem 1rem;
+                /*padding: 1.2rem 1rem 1rem 1rem;
 
                 h1 {
                     font-size: 1rem;
                 }
 
-                ul { font-size: .8rem; }
+                ul { font-size: .8rem; }*/
             }
             }
 		}
@@ -3114,3 +3151,42 @@ section {
 		background-color: $brand-bg-color_1;
 	}
 }
+
+.template-blogindexpage {
+    .blog-listing-card {
+        .blog-listing-card__image {
+            img {
+                border: 1px solid $brand-blue--xlt;
+            }
+        }
+        .blog-listing-card__contents {
+
+            .blog-listing-card__title {
+
+            }
+
+            .block-paragraph {
+
+            }
+        }
+    }
+}
+
+.template-blogpage {
+    img.blog-featured-image {
+        border: 1px solid $brand-blue--xlt;
+    }
+
+    .block-image {
+        display: flex;
+
+        img {
+            border: 1px solid $brand-blue--xlt;
+            margin: .5rem auto 1.8rem auto;
+            padding: .4rem;
+        }
+    }
+}
+
+
+._form ._error { color: $warning; }
