@@ -11,8 +11,8 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool("DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS
 SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
-CSRF_TRUSTED_ORIGINS = ['https://cummins.herokuapp.com']
-ALLOWED_HOSTS = ["cummins.herokuapp.com", "localhost", "127.0.0.1", "0.0.0.0"]
+CSRF_TRUSTED_ORIGINS = ['https://cummins.herokuapp.com', 'https://www.cumminsbhs.org', 'https://cumminsbhs.org']
+ALLOWED_HOSTS = ['www.cumminsbhs.org', 'cumminsbhs.org', 'cummins.herokuapp.com', 'localhost', '127.0.0.1', '0.0.0.0']
 
 DATABASES = {
     "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres2@db/postgres2")

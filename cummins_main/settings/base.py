@@ -161,8 +161,18 @@ MEDIA_URL = "/media/"
 
 
 # Wagtail settings
-WAGTAIL_SITE_NAME = "cummins_main"
+WAGTAIL_SITE_NAME = "Cummins Behavioral Health Systems"
+WAGTAILEMBEDS_RESPONSIVE_HTML = True
 
+# Rich Text Editor features
+WAGTAILADMIN_RICH_TEXT_EDITORS = {
+    'default': {
+        'WIDGET': 'wagtail.admin.rich_text.DraftailRichTextArea',
+        'OPTIONS': {
+            'features': ['h2', 'h3', 'h4', 'bold', 'italic', 'ol', 'ul', 'hr', 'link', 'document-link', 'image', 'embed', 'code', 'blockquote']
+        }
+    }
+}
 
 # Search
 # https://docs.wagtail.org/en/stable/topics/search/backends.html
@@ -176,4 +186,5 @@ WAGTAILSEARCH_BACKENDS = {
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 # WAGTAILADMIN_BASE_URL = "http://example.com"
+# TODO: Set to prod URL
 WAGTAILADMIN_BASE_URL = "https://cummins.herokuapp.com"

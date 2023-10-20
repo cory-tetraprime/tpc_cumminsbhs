@@ -20,7 +20,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 class BlogIndexPage(Page):
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
-        all_posts = BlogPage.objects.live().public().order_by('first_published_at')
+        all_posts = BlogPage.objects.live().public().order_by('-date')
         paginator = Paginator(all_posts, 12)
         page = request.GET.get('page')
         try:

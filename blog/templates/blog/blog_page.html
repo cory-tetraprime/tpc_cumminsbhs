@@ -36,7 +36,9 @@
 
                 {% if not page.content_rich_1 and not page.content_rich_2 %}
                 <div class="col-12 col-md-8 d-flex flex-column mx-auto main-content">
-                    <h2 class="mt-0">{{ page.title }}</h2>
+                    {% if not page.image_banner %}
+                    <h1 class="mt-0">{{ page.title }}</h1>
+                    {% endif %}
                     <p class="meta">{{ page.date }}</p>
                     {% image page.featured_image original loading="lazy" class="blog-featured-image rounded-3 mx-auto mb-5" %}
                     {% include_block page.body %}
