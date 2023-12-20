@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-12 d-flex mb-3">
                         <a href="/patients/getting-started/" class="btn btn-primary me-3"><span class="d-flex align-items-center"><i class="bi bi-person-fill-add fs-6 me-1 mr-4"></i><span><span class="d-none d-lg-inline">Information for </span>New Patients</span></span></a>
-                        <a href="https://cbhsc.smartcarenet.com/CBHSmartcareProd/Login.aspx?Status=Logout&SessionExpire=Y" target="_blank" class="btn btn-primary btn-custom--mylink ms-auto"><span class="d-flex align-items-center"><i class="bi bi-person-circle fs-6 me-1 mr-4"></i>My Portal</span></a>
+                        <a href="https://cbhsc.smartcarenet.com/CBHSmartcareProd/PatientPortal.aspx" target="_blank" class="btn btn-primary btn-custom--mylink ms-auto"><span class="d-flex align-items-center"><i class="bi bi-person-circle fs-6 me-1 mr-4"></i>My Portal</span></a>
                     </div>
                     <div class="col-12">
                         <form action="{% url 'search' %}" method="get">
@@ -28,6 +28,8 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div id="header-alert-1" class="col-12 mt-1" style="display: none;">
                     </div>
                 </div>
             </div>
@@ -58,6 +60,7 @@
                         <li><a href="/patients/medical-records/">Medical Records</a></li>
                     </ul>
                 </li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/careers" class="nav_careers d-none d-lg-block"><i
