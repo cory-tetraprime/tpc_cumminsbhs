@@ -92,7 +92,7 @@ h6 {
   font-family: var(--font-headline); }
 
 section {
-  padding: 30px 0;
+  padding: 4rem 0;
   scroll-margin-top: 70px; }
 
 .sections-bg {
@@ -1159,6 +1159,7 @@ section {
       background: rgba(0, 131, 116, 0.8); }
 
 .topbar .mobile-nav-show {
+  align-self: flex-start;
   background-color: #016DAE;
   border-radius: 6px;
   color: #fff; }
@@ -2046,10 +2047,7 @@ section {
     .topbar i.color-custom-1 {
       color: #562D88; }
   .topbar .contact-info i {
-    font-style: normal;
-    line-height: 18px; }
-    .topbar .contact-info i::before {
-      font-size: 26px; }
+    font-style: normal; }
     .topbar .contact-info i a {
       padding-left: 5px;
       color: black;
@@ -2061,29 +2059,31 @@ section {
     .topbar .contact-info i span {
       padding-left: 5px; }
   .topbar .contact-info .contact-info_heading {
-    font-size: .8rem; }
+    font-size: .9rem;
+    line-height: 1rem; }
   .topbar .contact-info .contact-info_title {
     color: #016DAE;
     font-size: 1rem;
+    line-height: 1.1rem;
     font-weight: 600; }
     .topbar .contact-info .contact-info_title.color-custom-1 {
       color: #562D88; }
 
 @media (max-width: 992px) {
-  .topbar .contact-info i {
-    line-height: 0.8rem; }
   .topbar .contact-info .contact-info_heading {
-    font-size: .6rem; }
+    font-size: .7rem;
+    line-height: .8rem; }
   .topbar .contact-info .contact-info_title {
-    font-size: .7rem; } }
+    font-size: .7rem;
+    line-height: .8rem; } }
 
 @media (max-width: 768px) {
-  .topbar .contact-info i {
-    line-height: 0.6rem; }
   .topbar .contact-info .contact-info_heading {
-    font-size: .5rem; }
+    font-size: .6rem;
+    line-height: .7rem; }
   .topbar .contact-info .contact-info_title {
-    font-size: .6rem; } }
+    font-size: .6rem;
+    line-height: .7rem; } }
 
 header .header_search input[type="text"] {
   border-right: 0;
@@ -2105,6 +2105,7 @@ header .header_search .input-group-text {
   color: #515151;
   font-size: .9rem;
   font-weight: 600;
+  line-height: 1rem;
   padding-right: 1.2rem;
   text-align: left; }
   .btn-primary:hover, .btn-primary:first-child:hover, :not(.btn-check) + .btn:active:hover {
@@ -2186,8 +2187,6 @@ section {
       font-style: italic; }
   section.page-subscribe .footer_subscribe > div {
     width: 100%; }
-  section.home-welcome {
-    padding-top: 0; }
   section.home-blog-feature {
     background-color: #EDE1CD; }
     section.home-blog-feature .home-blog-feature-posts .col:first-child {
@@ -2209,71 +2208,69 @@ section {
           max-width: 100%; } }
       section.home-services .services-selector h3 {
         font-size: 1.5rem; }
-  section.home-welcome, section.page-content {
-    padding-top: 20px; }
-    section.home-welcome p, section.page-content p {
-      line-height: 1.8rem; }
-      section.home-welcome p a, section.page-content p a {
-        font-style: italic;
-        text-decoration: underline; }
-    section.home-welcome .main-content h1, section.page-content .main-content h1 {
-      margin-top: 2rem; }
-      section.home-welcome .main-content h1::after, section.page-content .main-content h1::after {
-        content: " ";
-        border-bottom: 4px solid #016DAE;
-        display: block;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        width: 6rem; }
-    section.home-welcome .main-content h2, section.page-content .main-content h2 {
-      margin-top: 2rem; }
-      section.home-welcome .main-content h2::after, section.page-content .main-content h2::after {
-        content: " ";
-        border-bottom: 4px solid #D2B582;
-        display: block;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        width: 5rem; }
-    section.home-welcome .main-content h3, section.page-content .main-content h3 {
-      margin-top: 2rem; }
-      section.home-welcome .main-content h3::after, section.page-content .main-content h3::after {
-        content: " ";
-        border-bottom: 4px solid #7FB5D6;
-        display: block;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        width: 4rem; }
-    section.home-welcome .main-content h4, section.page-content .main-content h4 {
-      font-weight: bold;
-      margin-top: 1.2rem; }
-      section.home-welcome .main-content h4 i, section.page-content .main-content h4 i {
-        font-size: 1.4rem; }
-    section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
-      /*margin-top: 1rem;
+  section.home-welcome p, section.page-content p {
+    line-height: 1.8rem; }
+    section.home-welcome p a, section.page-content p a {
+      font-style: italic;
+      text-decoration: underline; }
+  section.home-welcome .main-content h1, section.page-content .main-content h1 {
+    margin-top: 2rem; }
+    section.home-welcome .main-content h1::after, section.page-content .main-content h1::after {
+      content: " ";
+      border-bottom: 4px solid #016DAE;
+      display: block;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      width: 6rem; }
+  section.home-welcome .main-content h2, section.page-content .main-content h2 {
+    margin-top: 2rem; }
+    section.home-welcome .main-content h2::after, section.page-content .main-content h2::after {
+      content: " ";
+      border-bottom: 4px solid #D2B582;
+      display: block;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      width: 5rem; }
+  section.home-welcome .main-content h3, section.page-content .main-content h3 {
+    margin-top: 2rem; }
+    section.home-welcome .main-content h3::after, section.page-content .main-content h3::after {
+      content: " ";
+      border-bottom: 4px solid #7FB5D6;
+      display: block;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      width: 4rem; }
+  section.home-welcome .main-content h4, section.page-content .main-content h4 {
+    font-weight: bold;
+    margin-top: 1.2rem; }
+    section.home-welcome .main-content h4 i, section.page-content .main-content h4 i {
+      font-size: 1.4rem; }
+  section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
+    /*margin-top: 1rem;
                 padding: 1.4rem 1.2rem 1.2rem 1.2rem;*/
-      /*h1 {
+    /*h1 {
 		            color: $brand-blue--dk;
 		            font-weight: normal;
 		            font-size: 1.4rem;
 		            margin-bottom: .8rem;
 		        }*/ }
-      section.home-welcome .sidebar .sidebar-info ul, section.page-content .sidebar .sidebar-info ul {
-        line-height: 1.8rem;
-        /*font-size: 1rem;
+    section.home-welcome .sidebar .sidebar-info ul, section.page-content .sidebar .sidebar-info ul {
+      line-height: 1.8rem;
+      /*font-size: 1rem;
                     padding-left: 1.6rem;*/ }
-        section.home-welcome .sidebar .sidebar-info ul li, section.page-content .sidebar .sidebar-info ul li {
-          /*line-height: 1.3rem;
+      section.home-welcome .sidebar .sidebar-info ul li, section.page-content .sidebar .sidebar-info ul li {
+        /*line-height: 1.3rem;
                         margin-bottom: 0.5rem;*/ }
-          section.home-welcome .sidebar .sidebar-info ul li::marker, section.page-content .sidebar .sidebar-info ul li::marker {
-            color: #7FB5D6; }
-      section.home-welcome .sidebar .sidebar-info.sidebar-info--bg-1, section.page-content .sidebar .sidebar-info.sidebar-info--bg-1 {
-        background-color: #DEECF4;
-        border-radius: 10px; }
-      section.home-welcome .sidebar .sidebar-info .bi, section.page-content .sidebar .sidebar-info .bi {
-        color: #D2B582; }
-    @media (max-width: 992px) {
-      section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
-        /*padding: 1.2rem 1rem 1rem 1rem;
+        section.home-welcome .sidebar .sidebar-info ul li::marker, section.page-content .sidebar .sidebar-info ul li::marker {
+          color: #7FB5D6; }
+    section.home-welcome .sidebar .sidebar-info.sidebar-info--bg-1, section.page-content .sidebar .sidebar-info.sidebar-info--bg-1 {
+      background-color: #DEECF4;
+      border-radius: 10px; }
+    section.home-welcome .sidebar .sidebar-info .bi, section.page-content .sidebar .sidebar-info .bi {
+      color: #D2B582; }
+  @media (max-width: 992px) {
+    section.home-welcome .sidebar .sidebar-info, section.page-content .sidebar .sidebar-info {
+      /*padding: 1.2rem 1rem 1rem 1rem;
 
                 h1 {
                     font-size: 1rem;

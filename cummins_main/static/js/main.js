@@ -7,6 +7,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  function loadCustomScripts() {
+    var userLanguage = navigator.language || navigator.userLanguage;
+    console.log(userLanguage);
+  }
+  loadCustomScripts();
+
   /**
    * Preloader
    */
